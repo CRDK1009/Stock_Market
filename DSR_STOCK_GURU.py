@@ -1,5 +1,5 @@
 import streamlit as st
-
+st.cache(ttl=3600*24, show_spinner=False)
 st.title('DeepSaRa Stock Guru') 
 
 import pandas as pd
