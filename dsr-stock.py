@@ -4,6 +4,7 @@ import numpy as np
 import yfinance as yf
 import time
 st.title('DeepSaRa Stock Guru') 
+st.markdown("_Fill all Companies' names (Security code) with the Suffix as '.NS' and fill it as Uppercase letters_")
 a=st.text_input(label='1st Company for Comparision')
 b=st.text_input(label='2nd Company for Comparision')
 Stocks=[a,b]
