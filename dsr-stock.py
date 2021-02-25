@@ -7,9 +7,6 @@ st.title('DeepSaRa Stock Guru')
 a=st.text_input(label='1st Company for Comparision')
 b=st.text_input(label='2nd Company for Comparision')
 Stocks=[a,b]
-if st.button('Collect Data'):
-    with st.spinner('Analysis of Stocks...'):
-        time.sleep(1)
 Stocks_data=yf.download(Stocks,period='2mo')
 st.table(Stocks_data['Adj Close'].head())
 Nifty=yf.download('^NSEI',period='2mo')
