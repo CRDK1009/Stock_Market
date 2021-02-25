@@ -5,9 +5,7 @@ import yfinance as yf
 import time
 a=st.text_input(label='1st Company for Comparision')
 b=st.text_input(label='2nd Company for Comparision')
-c=st.text_input(label='3rd Company for Comparision')
-d=st.text_input(label='4th Company for Comparision')
-Stocks=[a,b,c,d]
+Stocks=[a,b]
 if st.button('Collect Data'):
     with st.spinner('Analysis of Stocks...'):
         time.sleep(1)
