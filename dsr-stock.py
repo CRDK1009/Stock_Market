@@ -10,6 +10,7 @@ a=st.text_input(label='1st Company for Comparision')
 b=st.text_input(label='2nd Company for Comparision')
 Stocks=[a,b]
 Stocks_data=yf.download(Stocks,period='2mo')
+st.markdown("_A snippet of the data collected_")
 st.table(Stocks_data['Adj Close'].head())
 Nifty=yf.download('^NSEI',period='2mo')
 Data_Close_price=Stocks_data['Adj Close'].join(Nifty['Adj Close'])
@@ -26,7 +27,7 @@ import plotly.express as px
 fig = px.line(Predictions_value, x="index", y=Predictions_value.drop(['Adj Close'],axis=1).columns,
               title='Value of Stocks')
 fig.add_scatter(x=Predictions_value['index'], y=Predictions_value['Adj Close'],name='NIFTY')
-st.markdown('_This chart shows the Performance of each stock compared to the Market performance,i.e. if the chart shows any of the stocks above the dotted line (NSE) then it will perform better then the market in the Future. You can also compare the data in the chart where the options for comparision are present in the Top right corner of the chart_') 
+st.markdown('_This chart below shows the Performance of each stock compared to the Market performance,i.e. if the chart shows any of the stocks above the dotted line (NSE) then it will perform better than the market in the Future. You can also compare the data in the chart where the options for comparision are present in the Top right corner of the chart_') 
 st.plotly_chart(fig)
 stock_returns=Value.drop(['Adj Close'],axis=1)
 sp_returns=Value['Adj Close']
@@ -45,10 +46,10 @@ fig_Sharpe = go.Figure(data=[go.Bar(
             textposition='auto',
         )])
 
-st.markdown('_This chart shows the Risk and Return on each of the stock, higher the value more likely are you to recieve returns from that stock, with the risks present in that stock_') 
+st.markdown('_This chart below shows the Risk and Return on each of the stock, higher the value more likely are you to recieve returns from that stock, with the risks present in that stock_') 
 st.header('Best Stock to invest in according to Risks and Returns rate present in stock')
 st.plotly_chart(fig_Sharpe)
 Close_Price=Stocks_data['Adj Close'].iloc[-1,:]
 st.header('Price')
 st.table(Close_Price)
-
+st.markdown("_~ C R Deepak Kumar_")
