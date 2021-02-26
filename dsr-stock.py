@@ -6,8 +6,8 @@ import time
 st.title('DeepSaRa Stock Guru') 
 st.markdown("_Fill all Companies' names (Security code) with the Suffix as '.NS' and fill it as Uppercase letters_")
 st.markdown("_Please fill all the Values for the App to continue functioning_")
-a=st.text_input(label='1st Company for Comparision')
-b=st.text_input(label='2nd Company for Comparision')
+a=st.text_input(label='1st Company for Comparision','LT.NS')
+b=st.text_input(label='2nd Company for Comparision','BHEL.NS')
 Stocks=[a,b]
 Stocks_data=yf.download(Stocks,period='2mo')
 st.markdown("_A snippet of the data collected_")
