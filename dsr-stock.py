@@ -56,7 +56,7 @@ daily_sharpe_ratio=avg_excess_return.div(sd_excess_return)
 annual_factor=np.sqrt(252)
 annual_sharpe_ratio=daily_sharpe_ratio.mul(annual_factor)
 Sharpe_ratio=pd.DataFrame(annual_sharpe_ratio)
-st.markdown("_Investment Value (Return/Risk) in the Stocks_")
+st.markdown("_Investment Value according to the Risk & Return present in the Stocks_")
 # Use textposition='auto' for direct text
 fig_Sharpe = go.Figure(data=[go.Bar(
             x=Sharpe_ratio.index, y=Sharpe_ratio[0],
