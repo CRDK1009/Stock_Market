@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 import time
+import plotly.graph_objects as go
 st.title('DeepSaRa Stock Guru') 
 st.markdown("_Fill all Companies' names (Company Stock Symbols) with the Suffix as '.NS' and fill it as Uppercase letters_")
 st.markdown("_Please fill all the Values for the App to continue functioning_")
